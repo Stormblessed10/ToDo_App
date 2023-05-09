@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: var(--small-indent);
+
+    background-color: var(--color-secondary);
+    height: 4rem;
+    padding: var(--small-indent);
+
+    svg {
+        transition: var(--transition);
+    }
+
+    svg:hover {
+        fill: var(--color-primary);
+    }
+
+}
