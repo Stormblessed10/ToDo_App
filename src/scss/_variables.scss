@@ -1,4 +1,17 @@
 :root {
-    --element-gradient: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-    --large-padding: 4.8rem;
+    --element-gradient: linear-gradient(to right, #12e952, #d6ed71, #f64f59);
+    --xlarge-indent: 5rem;
+    --large-indent: 3rem;
+    --medium-indent: 2rem;
+    --small-indent: 1rem;
+    --xsmall-indent: 0.5rem;
+    --color-background: rgba(55, 73, 88, 0.712);
+    --color-primary: #fff;
+    --color-secondary: #374958;
+    --color-tertiary: #EEBC1D;
+    --radius: 8px;
+    --priority-high: rgb(147, 33, 25);
+    --priority-medium: rgb(205, 190, 31);
+    --priority-low: rgb(31, 155, 15);
+    --transition: all 1s;
 }

@@ -1,4 +1,38 @@
 .header {
     height: 7rem;
-    background: var(--element-gradient);
+    padding: var(--small-indent) var(--medium-indent);
+    border-bottom: 2px solid var(--color-primary);
+    background-color: var(--color-secondary);
+
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-text {
+        font-size: 4.4rem;
+        font-weight: 700;
+
+        span {
+            color: var(--color-tertiary);
+        }
+    }
+
+    .hide-side-bar {
+        padding: 3px;
+        font-size: 18px;
+        span {
+            display: block;
+            height: 9px;
+            border-bottom: 2px solid var(--color-primary);
+            border-top: 2px solid var(--color-primary);;
+        }
+    }
 }

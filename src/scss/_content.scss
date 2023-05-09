@@ -1,3 +1,81 @@
 .content {
-    padding: var(--large-padding);
+    padding: var(--large-indent) var(--xlarge-indent);
+    flex-grow: 10;
+
+    h1 {
+        background-color: var(--color-background);
+        color: var(--color-primary);
+        padding: var(--medium-indent);
+        border-radius: var(--radius);
+    }
+
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--small-indent);
+        margin-top: var(--medium-indent);
+    }
+
+    .todo-form {
+        background-color: var(--color-background);
+        margin-top: var(--small-indent);
+        padding: var(--medium-indent);
+
+        display: flex;
+        flex-direction: column;
+
+        & > *:nth-child(odd) {
+            margin-top: var(--xsmall-indent);
+        }
+    }
+
+    .todo {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: var(--xsmall-indent);
+        background-color: var(--color-background);
+        border-radius: 10px 0 0 10px ;
+        padding: var(--small-indent);
+        transition: all 0.5s;
+
+        &__complete {
+            cursor: pointer;
+            min-height: 2rem;
+            min-width: 2rem;
+            border: 1px solid #000;
+            margin-right: 1rem;
+            transition: all 0.5s;
+        }
+        
+        &__text {
+            transition: var(--transition);
+            flex-grow: 1;
+            line-height: 1;
+        }
+
+        &__date {
+            min-width: 10rem;
+            padding: 0.5rem
+        }
+    }
+
+
+    .todo:hover {
+        background-color: var(--color-secondary);
+        
+    }
+    
+    .priority-high {
+        border: 2px solid var(--priority-high);
+        border-left: 5px solid var(--priority-high);  
+    }  
+    .priority-medium {
+        border: 2px solid var(--priority-medium);
+        border-left: 5px solid var(--priority-medium);   
+    } 
+    .priority-low {
+        border: 2px solid var(--priority-low);
+        border-left: 5px solid var(--priority-low);
+    } 
 }

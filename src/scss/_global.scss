@@ -4,20 +4,165 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-primary);
+    background-image: url("../img/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .container {
-
+    max-width: 135rem;
+    margin: 0 auto;
+    min-height: 100%;
 }
 
 .main {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 2fr 5fr;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+// HEADINGS
+
+h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+// DYNAMIC CLASSES
+
+.selected {
+    transform: translateX(1.5rem);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.checked {
+    opacity: 0.5;
+    * {
+        text-decoration: line-through;
+    }
+}
+
+.side-bar.slide {
+    transform: translateX(-36rem);
+    min-width: 0;
+    width: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+}
+
+// BUTTONS
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.8rem;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: center;
+    gap: var(--medium-indent);
+    margin-top: var(--xsmall-indent);
+
+    &__add, &__cancel {
+        color: var(--color-secondary);
+        padding: var(--xsmall-indent) var(--small-indent);
+        border-radius: var(--radius);
+    }
+
+    &__add {
+        background: var(--color-primary);
+    }
+    
+    &__cancel {
+        background: rgb(190, 4, 4);
+    }
+}
+
+.btn-open-form {
+    padding: var(--xsmall-indent) var(--small-indent);
+    transition: var(--transition);
+
+    &:hover {
+        transform: translateY(10px);
+    }
+}
+
+.edit {
+    position: relative;
+
+    &__open {
+        transform: translateY(10%);
+
+        svg {
+            fill: var(--color-primary);
+            height: 30px;
+        }
+    }
+
+    &__options {
+        position: absolute;
+        top: -7.4rem;
+        left: -7rem;
+        z-index: 100;
+        
+        background-color: var(--color-background);
+        box-shadow: 0 0 5px var(--color-primary);
+        color: var(--color-primary);
+
+        display: flex;
+        flex-direction: column;
+        
+        & > * {
+            text-align: left;
+            padding: var(--xsmall-indent);
+            width: 100%;
+
+        }
+
+        & > *:hover {
+            background-color: #ADD8E6;
+        } 
+    }
+}
+
+// INPUtS
+
+.input, textarea {
+    background-color: var(--color-secondary);
+    font-family: inherit;
+    font-weight: 600;
+    color: inherit;
+    padding: var(--xsmall-indent);
+    border: none;
+    width: 100% !important;
+}
+
+textarea {
+    resize: vertical;
+    font-weight: 500;
 }

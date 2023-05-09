@@ -1,0 +1,31 @@
+@media (max-width: 64em) {
+    .side-bar {
+        position: fixed;
+        min-width: 30rem;
+        background-color: var(--color-secondary);
+        top: 7rem;
+    }
+
+    .selected {
+        background-color: var(--color-tertiary);
+    }
+}
+
+@media (max-width: 35.63em) {
+    html {
+        font-size: 50%;
+    }
+
+    .content {
+        .todo {
+            display: grid;
+            grid-template-columns: 2.4rem 1fr 4rem;
+
+            &__date {
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
+        }
+    }
+
+}
