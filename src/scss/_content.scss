@@ -3,8 +3,8 @@
     flex-grow: 10;
 
     h1 {
-        background-color: var(--color-background);
-        color: var(--color-primary);
+        background-color: var(--color-secondary);
+        color: var(--color-tertiary);
         padding: var(--medium-indent);
         border-radius: var(--radius);
     }
@@ -17,24 +17,28 @@
     }
 
     .todo-form {
-        background-color: var(--color-background);
+        background-color: var(--color-tertiary);
         margin-top: var(--small-indent);
         padding: var(--medium-indent);
 
         display: flex;
         flex-direction: column;
+        transition: var(--transition);
 
         & > *:nth-child(odd) {
-            margin-top: var(--xsmall-indent);
+            margin-top: var(--small-indent);
+        }
+
+        label {
+            color: var(--color-primary);
         }
     }
 
     .todo {
         cursor: pointer;
         display: flex;
-        align-items: center;
         gap: var(--xsmall-indent);
-        background-color: var(--color-background);
+        background-color: var(--color-primary);
         border-radius: 10px 0 0 10px ;
         padding: var(--small-indent);
         transition: all 0.5s;
@@ -58,12 +62,6 @@
             min-width: 10rem;
             padding: 0.5rem
         }
-    }
-
-
-    .todo:hover {
-        background-color: var(--color-secondary);
-        
     }
     
     .priority-high {

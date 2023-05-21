@@ -1,8 +1,8 @@
 .header {
-    height: 7rem;
+    height: 5rem;
     padding: var(--small-indent) var(--medium-indent);
-    border-bottom: 2px solid var(--color-primary);
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow);
 
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@
     .logo-text {
         font-size: 4.4rem;
         font-weight: 700;
-
+        color: var(--color-secondary);
         span {
             color: var(--color-tertiary);
         }
@@ -28,11 +28,12 @@
     .hide-side-bar {
         padding: 3px;
         font-size: 18px;
+        color: var(--color-secondary);
         span {
             display: block;
             height: 9px;
-            border-bottom: 2px solid var(--color-primary);
-            border-top: 2px solid var(--color-primary);;
+            border-bottom: 2px solid var(--color-secondary);
+            border-top: 2px solid var(--color-secondary);;
         }
     }
 }

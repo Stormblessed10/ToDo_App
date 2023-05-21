@@ -3,12 +3,15 @@ import * as model from './model';
 import sideView from './view/sideView';
 import tasksView from './view/tasksView';
 
+function getId() {
+    return model.state.projects.find(project => project.id === window.location.hash.slice(1));
+}
+
 function launch() {
     window.location.hash = '#allTasks';
-    const id = model.state.projects.find(project => project.id === window.location.hash.slice(1));
     model.AddHomeTasks();
     sideView.renderAllProjects(model.state.projects);
-    tasksView.renderAllTasks(id);
+    tasksView.renderAllTasks(getId());
 }
 
 function controlAddProject() {
@@ -19,7 +22,6 @@ function controlAddProject() {
 }
 
 function controlAddTasks() {
-    const id = model.state.projects.find(project => project.id === window.location.hash.slice(1));
     const data = tasksView.getTask();
     model.addTasks(data);
     tasksView.render(model.state.task);
@@ -35,20 +37,17 @@ function controlRemoveProject(projectId) {
     tasksView.moveFormEdit();
     model.removeProject(projectId);
     model.AddHomeTasks();
-    const id = model.state.projects.find(project => project.id === window.location.hash.slice(1));
     if (projectId === window.location.hash.slice(1)) tasksView.renderEmpty();
-    else tasksView.renderAllTasks(id);
+    else tasksView.renderAllTasks(getId());
 }
 
 function loadTasks() {
-    const id = model.state.projects.find(project => project.id === window.location.hash.slice(1));
-    tasksView.renderAllTasks(id);
+    tasksView.renderAllTasks(getId());
 }
 
 function controlEditTask() {
     const data = tasksView.getTask();
     model.editTask(data);
-    const id = model.state.projects.find(project => project.id === window.location.hash.slice(1));
     tasksView.updateTask(model.state.task);
     model.AddHomeTasks();
 }

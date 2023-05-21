@@ -3,16 +3,23 @@
     justify-content: center;
     gap: var(--small-indent);
 
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     height: 4rem;
+    margin-top: auto;
     padding: var(--small-indent);
 
+    transition: all 0.1s;
+    box-shadow: var(--shadow);
+
+
+    position: relative;
+    z-index: 100;
     svg {
         transition: var(--transition);
     }
 
     svg:hover {
-        fill: var(--color-primary);
+        fill: var(--color-secondary);
     }
 
 }

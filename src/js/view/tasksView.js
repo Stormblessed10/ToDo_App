@@ -91,7 +91,7 @@ class TasksView extends View {
         newEls.forEach((newEl, i) => {
             const currentEl = currentEls[i];
             if (!newEl.isEqualNode(currentEl)
-            && newEl.firstChild?.nodeValue.trim() !== '') currentEl.textContent = newEl.textContent;
+            && newEl.firstChild?.nodeValue?.trim() !== '') currentEl.textContent = newEl.textContent;
         });
     }
 

@@ -1,23 +1,21 @@
 .side-bar {
     padding: var(--large-indent);
     min-width: 25.5%;
+    width: 25.5%;
+    height: 100%;
     transition: var(--transition);
-    top: 0;
-    position: sticky;
-    height: calc(100vh - 7rem);
-    overflow-y: scroll;
-    z-index: 10;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
     h2 {
+        color: var(--color-primary);
         border-bottom: 1px solid var(--color-primary);
     }
 
     &__list {
-        padding: var(--medium-indent) 0;
+        padding: var(--medium-indent) 0 var(--xsmall-indent) 0;
         display: flex;
         flex-direction: column;
         gap: var(--small-indent);
@@ -30,25 +28,32 @@
         align-items: center;
         padding: 0 var(--small-indent);
         cursor: pointer;
-        background-color: var(--color-background);
+        background-color: var(--color-primary);
         transition: all 0.5s;
 
         a:link, a:visited {
+            display: block;
             width: 100%;
             text-overflow: ellipsis;
             overflow: hidden;
             text-decoration: none;
-            color: var(--color-primary);
+            color: var(--color-tertiary);
             padding: var(--xsmall-indent) var(--small-indent);
             font-size: 1.8rem;
             cursor: pointer;
-            display: block;
             font-weight: 600;
+            transition: var(--transition);
+
             flex-grow: 1;
         }
 
         &:hover {
-            transform: translateX(1.5rem);
+            background-color: var(--color-secondary);
         }
+    }
+
+    &__item.selected {
+        transform: translateX(1rem);
+        background-color: var(--color-secondary);
     }
 }

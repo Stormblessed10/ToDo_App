@@ -5,13 +5,13 @@
     --medium-indent: 2rem;
     --small-indent: 1rem;
     --xsmall-indent: 0.5rem;
-    --color-background: rgba(55, 73, 88, 0.712);
-    --color-primary: #fff;
-    --color-secondary: #374958;
-    --color-tertiary: #EEBC1D;
+    --color-primary: #343a40;
+    --color-secondary: #eb6f4c;
+    --color-tertiary: #f8f9fa;
     --radius: 8px;
     --priority-high: rgb(147, 33, 25);
     --priority-medium: rgb(205, 190, 31);
     --priority-low: rgb(31, 155, 15);
     --transition: all 1s;
+    --shadow: 1px 1px 5px 1px var(--color-tertiary);
 }

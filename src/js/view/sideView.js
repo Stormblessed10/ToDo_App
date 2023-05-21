@@ -29,12 +29,6 @@ class SideView extends View {
         this._toggleSideBar();
     }
 
-    _toggleSideBar() {
-        document.querySelector('.hide-side-bar').addEventListener('click', function() {
-            this._parentEl.classList.toggle('slide');
-        }.bind(this));
-    }
-
     getProjectData() {
         return [this._parentEl.querySelector('.side-bar__input').value, this._selected];
     }
@@ -68,14 +62,26 @@ class SideView extends View {
         if (!newEl.isEqualNode(currentEl)) currentEl.textContent = newEl.textContent;    
     }
 
+    _toggleSideBar() {
+        document.querySelector('.hide-side-bar').addEventListener('click', function() {
+            this._parentEl.classList.toggle('slide');
+            setTimeout(() => {
+                // this._parentEl.style.display = 'none';
+            }, 1000)
+        }.bind(this));
+    }
+    
+
     _selectProject() {
         this._parentEl.addEventListener('click', function(e) {
             if (!e.target.classList.contains('side-bar__item-link')) return;
+
             this._parentEl.querySelectorAll('.side-bar__item').forEach(item => {
                 if (item.classList.contains('selected')) item.classList.remove('selected');
             });
             e.target.closest('.side-bar__item').classList.add('selected');
         }.bind(this));
+        window.scrollTo(0, 0);
     }
 
     _generateMarkupAll() {
