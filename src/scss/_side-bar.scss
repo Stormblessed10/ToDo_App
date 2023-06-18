@@ -26,25 +26,32 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 var(--small-indent);
         cursor: pointer;
         background-color: var(--color-primary);
         transition: all 0.5s;
 
         a:link, a:visited {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: var(--xsmall-indent);
+            flex-grow: 1;
+
             width: 100%;
             text-overflow: ellipsis;
             overflow: hidden;
             text-decoration: none;
             color: var(--color-tertiary);
             padding: var(--xsmall-indent) var(--small-indent);
-            font-size: 1.8rem;
             cursor: pointer;
+            font-size: 1.8rem;
             font-weight: 600;
             transition: var(--transition);
 
-            flex-grow: 1;
+
+            img {
+                height: 2.4rem;
+                width: 2.4rem;
+            }
         }
 
         &:hover {
