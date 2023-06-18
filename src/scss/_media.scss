@@ -1,5 +1,11 @@
 @media (max-width: 64em) {
 
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
     .content {
         h1 {
             text-align: center;
