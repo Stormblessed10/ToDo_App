@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="icons/today.png" type="image/x-icon">
     <title>ToDo</title>
     <script src="main.js" defer></script>
 </head>
@@ -13,17 +13,18 @@
     <header class="header">
         <button class="hide-side-bar"><span>—</span></button>
         <div class="header__logo">
-            <p class="logo-text">To<span>Do</span></p>
+            <p class="logo-text">To<span>do</span> App</p>
         </div>
+        <div></div>
     </header>
     <div class="container">
         <main class="main">
             <nav class="side-bar">
                 <h2>Home</h2>
                 <ul class="side-bar__list home">
-                    <li class="side-bar__item selected"><a class="side-bar__item-link" href="#allTasks">All Tasks</a></li>
-                    <li class="side-bar__item"><a class="side-bar__item-link" href="#today">Today</a></li>
-                    <li class="side-bar__item"><a class="side-bar__item-link" href="#week">Next 7 Days</a></li>
+                    <li class="side-bar__item selected"><a class="side-bar__item-link" href="#allTasks"><img src="icons/all.png" alt="all tasks icon"> All Tasks</a></li>
+                    <li class="side-bar__item"><a class="side-bar__item-link" href="#today"><img src="icons/today.png" alt="today icon">Today</a></li>
+                    <li class="side-bar__item"><a class="side-bar__item-link" href="#week"><img src="icons/nextDays.png" alt="week tasks icon">Next 7 Days</a></li>
                 </ul>
 
                 <h2>Projects</h2>
